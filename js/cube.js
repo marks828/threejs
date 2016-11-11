@@ -10,26 +10,24 @@ var material = new THREE.MeshBasicMaterial( { color: 'lightblue'} );
 var cube = new THREE.Mesh( geometry, material );
 
 var sGeometry = new THREE.SphereGeometry( 5, 32, 32 );
-var sMaterial = new THREE.MeshBasicMaterial( {color: 0xffff00} );
+var sMaterial = new THREE.MeshBasicMaterial( {color: "grey"} );
 var sphere = new THREE.Mesh( sGeometry, sMaterial );
 scene.add( sphere, cube );
 
 camera.position.z = 20;
 
-// lights
-var light = new THREE.DirectionalLight(0xff0000, 2.0, 600)
-light.position.set( 50, 50, 50 )
-scene.add(light)
-
-
+delta = 0
 function render(){
   requestAnimationFrame( render )
-  cube.position.x = 10
+
+  delta += 0.01
+
   // cube.rotation.x += 0.01
   // cube.rotation.y += 0.01
-  // sphere.rotation.x += 0.01
-  // sphere.rotation.y += 0.01
-  // cube.rotation.z += 0.01
+  // // cube.rotation.z += 0.01
+  // cube.rotation.x = Math.sin(delta)*20
+  sphere.position.y = Math.sin(delta)*2
+  sphere.position.z = Math.sin(delta)*5
 
   renderer.render(scene, camera)
 }
