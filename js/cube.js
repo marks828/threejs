@@ -26,8 +26,8 @@ function render(){
   // cube.rotation.y += 0.01
   // // cube.rotation.z += 0.01
   // cube.rotation.x = Math.sin(delta)*20
-  sphere.position.y = Math.sin(delta)*2
-  sphere.position.z = Math.sin(delta)*5
+  // sphere.position.y = Math.sin(delta)*2
+  // sphere.position.z = Math.sin(delta)*5
 
   renderer.render(scene, camera)
 }

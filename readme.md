@@ -26,3 +26,6 @@ What are 3 interview questions one might be asked about this technology?
   How would you light this image?
   How would you create a reflection?
   How can you make typography?
+
+No install. Need script tags with a source to you three.min.js and wherever you put your
+scripts
